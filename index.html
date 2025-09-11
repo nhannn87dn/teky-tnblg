@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Link trải nghiệm BLG</title>
+  <style>
+    :root{
+      --bg:#f6fbff;
+      --card-bg:#ffffff;
+      --accent-1:#ff8a80; /* red */
+      --accent-2:#ffd180; /* orange */
+      --accent-3:#b9f6ca; /* green */
+      --accent-4:#80d8ff; /* blue */
+      --text:#0b2545;
+      --muted:#5b6b85;
+      --radius:18px;
+      --shadow: 0 8px 18px rgba(11,37,69,0.08);
+      --shadow-hover: 0 14px 30px rgba(11,37,69,0.12);
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background: linear-gradient(180deg, var(--bg), #eef7ff);
+      color:var(--text);
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+      box-sizing:border-box;
+    }
+
+    .card {
+      width:100%;
+      max-width:760px;
+      background:var(--card-bg);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      padding:28px;
+      box-sizing:border-box;
+    }
+
+    header {
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:18px;
+    }
+
+    .logo {
+      width:64px;
+      height:64px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      font-size:28px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    }
+
+    h1{
+      font-size:20px;
+      margin:0;
+      line-height:1.05;
+    }
+    p.lead{
+      margin:6px 0 18px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .links {
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+
+    /* each link styled as a big button-like block */
+    .kid-link {
+      display:flex;
+      align-items:center;
+      gap:18px;
+      text-decoration:none;
+      background:linear-gradient(180deg, #fff, #fbfdff);
+      border-radius:14px;
+      padding:20px;
+      box-sizing:border-box;
+      box-shadow: var(--shadow);
+      transition: transform .12s ease, box-shadow .12s ease;
+      border: 3px solid transparent;
+      outline: none;
+      color:var(--text);
+    }
+
+    .kid-link:focus {
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-hover);
+      border-color: rgba(0,0,0,0.06);
+    }
+
+    .kid-link:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .kid-link .icon {
+      width:64px;
+      height:64px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      font-size:28px;
+      flex-shrink:0;
+      color:#16324a;
+    }
+
+    .kid-link .meta {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .kid-link .title {
+      font-weight:700;
+      font-size:18px;
+      margin:0 0 4px 0;
+    }
+    .kid-link .desc {
+      margin:0;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* different colors for each item */
+    .c1 { background: linear-gradient(180deg, #fff0f0, #fff8f7); }
+    .c1 .icon { background: var(--accent-1); }
+
+    .c2 { background: linear-gradient(180deg, #fffaf0, #fffdf6); }
+    .c2 .icon { background: var(--accent-2); }
+
+    .c3 { background: linear-gradient(180deg, #f6fff6, #fbfff9); }
+    .c3 .icon { background: var(--accent-3); }
+
+    .c4 { background: linear-gradient(180deg, #f0fbff, #f7fdff); }
+    .c4 .icon { background: var(--accent-4); }
+
+    /* responsive adjustments */
+    @media (max-width:520px){
+      .kid-link { padding:16px; gap:12px; }
+      .kid-link .icon { width:56px; height:56px; font-size:24px; border-radius:10px; }
+      .logo { width:56px; height:56px; font-size:24px; border-radius:12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card" role="main" aria-labelledby="title">
+      <header>
+        <div>
+          <h1 id="title">Chọn một hoạt động</h1>
+          <p class="lead">Nhấn vào một ô để mở — mỗi ô sẽ mở trong tab mới.</p>
+        </div>
+      </header>
+
+      <section class="links" aria-label="Danh sách liên kết">
+        <!-- Link 1 -->
+        <a class="kid-link c1" href="https://codekitten.vn/projects/ed6eb7f2-ea2c-498e-8ba1-18a959842438" target="_blank" rel="noopener noreferrer" aria-label="Mở Example.com trong tab mới">
+          <div class="icon" aria-hidden="true">🔎</div>
+          <div class="meta">
+            <div class="title">1. Game Trải nghiệm - Chiến tranh vũ trụ</div>
+            <div class="desc">Cách tương tác nhận vật</div>
+          </div>
+        </a>
+
+        <!-- Link 2 -->
+        <a class="kid-link c2" href="https://studio.code.org/s/course2/stage/3/puzzle/1 " target="_blank" rel="noopener noreferrer" aria-label="Mở Wikipedia trong tab mới">
+          <div class="icon" aria-hidden="true">📚</div>
+          <div class="meta">
+            <div class="title">2. Trải nghiệm trên Code.org</div>
+            <div class="desc">Game <strong>Maze Sequence</strong> - Tìm hiểu về tính <strong>Tuần Tự</strong></div>
+          </div>
+        </a>
+
+        <!-- Link 3 -->
+        <a class="kid-link c3" href="https://codekitten.vn" target="_blank" rel="noopener noreferrer" aria-label="Mở YouTube trong tab mới">
+          <div class="icon" aria-hidden="true">▶️</div>
+          <div class="meta">
+            <div class="title">Giới thiệu công cụ codekitten</div>
+            <div class="desc">Hướng dẫn 1 vài lệnh cơ bản + tự trải nghiệm</div>
+          </div>
+        </a>
+
+        <!-- Link 4 -->
+        <!-- <a class="kid-link c4" href="https://www.natgeokids.com" target="_blank" rel="noopener noreferrer" aria-label="Mở NatGeo Kids trong tab mới">
+          <div class="icon" aria-hidden="true">🦁</div>
+          <div class="meta">
+            <div class="title">Động vật & Thiên nhiên</div>
+            <div class="desc">Khám phá động vật cho trẻ em</div>
+          </div>
+        </a> -->
+      </section>
+    </main>
+  </div>
+</body>
+</html>
