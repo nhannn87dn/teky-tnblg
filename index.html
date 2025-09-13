@@ -75,9 +75,9 @@
     }
 
     .links {
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
     }
 
     /* each link styled as a big button-like block */
@@ -120,6 +120,7 @@
     }
 
     .kid-link .meta {
+      flex: 1;
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -148,6 +149,11 @@
 
     .c4 { background: linear-gradient(180deg, #f0fbff, #f7fdff); }
     .c4 .icon { background: var(--accent-4); }
+    .qr-image {
+      max-width: 300px;
+      width: 100%;
+      height:auto;
+    }
 
     /* responsive adjustments */
     @media (max-width:520px){
@@ -155,6 +161,16 @@
       .kid-link .icon { width:56px; height:56px; font-size:24px; border-radius:10px; }
       .logo { width:56px; height:56px; font-size:24px; border-radius:12px; }
     }
+
+    @media (max-width:480px){
+      .wrap, .card {
+        padding: 20px;
+      }
+       .qr-image {
+        max-width: 200px;
+       }
+    }
+   
   </style>
 </head>
 <body>
@@ -169,7 +185,7 @@
 
       <section class="links" aria-label="Danh sách liên kết">
         <!-- Link 1 -->
-        <a class="kid-link c1" href="https://codekitten.vn/projects/ed6eb7f2-ea2c-498e-8ba1-18a959842438" target="_blank" rel="noopener noreferrer" aria-label="Mở Example.com trong tab mới">
+        <a class="kid-link c1" href="https://codekitten.vn/projects/32af05b1-a3ff-4a36-aadf-513988f0cc3b" target="_blank" rel="noopener noreferrer" aria-label="Mở Example.com trong tab mới">
           <div class="icon" aria-hidden="true">🔎</div>
           <div class="meta">
             <div class="title">1. Game Trải nghiệm - Chiến tranh vũ trụ</div>
@@ -204,7 +220,7 @@
           </div>
         </a> -->
         <div class="qr-code" style="margin-top: 30px; display: flex; justify-content: center;">
-          <img style="width: 300px;height: auto;" src="./images/qr-blg.png" alt="qr-code">
+          <img class="qr-image" src="./images/qr-blg.png" alt="qr-code">
         </div>
       </section>
     </main>
